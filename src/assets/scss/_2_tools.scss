@@ -1,0 +1,7 @@
+// Globally available tools
+// Eg: Default mixins, Helper functions
+// Does NOT contain css selectors!
+
+// bootstrap
+@import '~bootstrap/scss/_mixins.scss';
+@import './_2_tools/mixins';

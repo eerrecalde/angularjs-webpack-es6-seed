@@ -1,0 +1,26 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": "last 2 versions"
+        },
+        "loose": true,
+        "modules": false
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "syntax-dynamic-import",
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  },
+  "plugins": [
+    "add-module-exports",
+    "syntax-dynamic-import"
+  ]
+}

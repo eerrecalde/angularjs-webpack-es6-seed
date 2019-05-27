@@ -1,0 +1,14 @@
+.btn {
+  font-family: $btn-font-family;
+  text-transform: $btn-text-transform;
+
+  &.small-padding {
+    padding: $input-btn-padding-y 0.75rem;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color}.inverse {
+    @include button-outline-variant-inverse($value);
+  }
+}

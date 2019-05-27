@@ -1,0 +1,5 @@
+// Unclassed HTML elements (last layer we see type)
+// E.g: H1-H6, basic links, lists, etc. (a {}, ul {})
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/utilities';
+@import './_4_base/base';

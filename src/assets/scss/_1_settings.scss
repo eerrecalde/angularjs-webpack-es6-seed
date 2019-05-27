@@ -1,0 +1,8 @@
+// Global variables
+// E.g: config switches, brand colours, spacing units, etc.
+// Does NOT contain actual css selectors!
+
+@import './_1_settings/ts-theme';
+@import './_1_settings/globals';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';

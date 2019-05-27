@@ -1,0 +1,111 @@
+{
+  "name": "angular-es6-webpack-app",
+  "version": "0.0.1",
+  "description": "angular es6 and webpack scaffolding app",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "watch": {
+    "docs": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,scss,html"
+    },
+    "dev": {
+      "patterns": [
+        "src"
+      ],
+      "ignore": "src/template.js",
+      "extensions": "js,scss,html"
+    }
+  },
+  "bin": {
+    "jest": "./node_modules/.bin/jest"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "prebuild": "npm run lint && npm run stylelint",
+    "build": "webpack --progress --colors",
+    "build:prod": "cross-env NODE_ENV=production npm run build",
+    "build:dev": "cross-env NODE_ENV=development npm run build",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --colors --hot",
+    "prod": "npm run build:prod && ws -d dist --spa",
+    "watch-dev": "npm-watch dev",
+    "watch-docs": "npm-watch docs",
+    "lint": "eslint ./src/",
+    "lint:local": "eslint ./src/ -o",
+    "test:coverage": "jest -- --coverage",
+    "test:local": "jest -- -o",
+    "test:update": "jest -- -u",
+    "test:watch": "jest -- --watch",
+    "stylelint": "stylelint './src/**/*.scss' --syntax scss",
+    "docs": "npm run build:prodd && rimraf docs && grunt docs && ws -d docs --spa"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.2",
+    "@uirouter/angularjs": "^0.4.3",
+    "angular": "1.4.10",
+    "angular-animate": "1.4.10",
+    "angular-cookies": "1.4.10",
+    "angular-mocks": "1.4.10",
+    "angular-sanitize": "1.4.10",
+    "angular-touch": "^1.7.5",
+    "angular-translate": "^2.18.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "npm-font-source-sans-pro": "^1.0.2",
+    "popper.js": "^1.14.5",
+    "promise-polyfill": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "autoprefixer": "^9.3.1",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "clean-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "file-loader": "^2.0.0",
+    "grunt": "^1.0.3",
+    "grunt-ngdocs": "^0.2.11",
+    "html-loader-jest": "^0.2.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "local-web-server": "^2.6.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "script-loader": "^0.7.2",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "stylelint": "^9.8.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.4.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-deep-scope-plugin": "^1.6.0",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
+  }
+}

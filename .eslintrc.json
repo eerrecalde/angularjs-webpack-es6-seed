@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
+  "plugins": [
+    "import",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	},
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "xDomainCookie": true,
+    "angular": true,
+    "process": true,
+    "module": true,
+    "__dirname": true
+  },
+  "rules": {
+    "import/no-unresolved": 1,
+    "global-require": 0,
+    "prefer-template": 1,
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": false }],
+    "comma-dangle": ["error", "always-multiline"],
+    "prefer-destructuring": 1,
+    "arrow-parens": [2, "as-needed"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  }
+}

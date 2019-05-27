@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+    />
+    <title ng-if="!meta">App Default Title</title>
+    <title ng-if="meta">{{ meta.title || 'App Default Title' }}</title>
+    <meta name="description" content="{{ meta.description || 'Page Description' }}" />
+  </head>
+  <body ng-class="{'modal-open': isModalOpened}">
+    <div ui-view>
+      <p class="p-4 text-black text-center d-block" style="display: none;">
+        <i class="fa fa-spin fa-spinner"></i> Loading...
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+@import './colour-palette';
+
+//overides color
+$light-blue:    $light-blue !default;
+$blue:    $blue !default;
+$dark-blue:    $dark-blue !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  $orange !default;
+$yellow:  $yellow !default;
+$green:   #28a745 !default;
+$marine: $marine;
+$teal:    #20c997 !default;
+$cyan:    $cyan !default;
+$gray:    $gray !default;
+$light-gray:    #e6e6e6 !default;
+$black:   #000 !default;
+$white:   #fff !default;
+$dark-gray: #555 !default;
+$jumbotron-bg: #00c0e8 !default;
+
+// Main Colours
+$primary: $blue;
+$secondary: $orange;
+$tertiary: $black;
+$primary:       $primary !default;
+$secondary:     $secondary !default;
+$cyan: $cyan !default;
+
+// Fonts
+$font-helvetica:          "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-replica-pro:        "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font-family-base:        $font-helvetica;
+$font-size-base:          0.8rem !default; // Assumes the browser default, typically `16px`
+
+// Body
+$body-bg:                   $white !important;
+$body-color:                $dark-gray !default;
+
+// Headings
+$headings-font-family:        $font-replica-pro;
+$headings-font-weight:        600;
+$h6-font-size:                $font-size-base !default;
+$h5-font-size:                $font-size-base * 1.1 !default;
+$h4-font-size:                $font-size-base * 1.2 !default;
+$h3-font-size:                $font-size-base * 2.3 !default;
+$h2-font-size:                $font-size-base * 2.5 !default;
+$h1-font-size:                $font-size-base * 3.75 !default;
+
+// Buttons
+$border-radius: 0.1rem !default;
+$input-btn-padding-y: 0.45rem !default;
+$input-btn-padding-x: 2rem !default;
+$input-padding-x: 0.75rem !default;
+$btn-text-transform: uppercase !default;
+$btn-font-family: $font-replica-pro;
+$btn-disabled-opacity: 0.5 !default;
+
+// Input
+// TODO: This is being calculated based on variables in bootstrap. Work out a real variable to replace magic number (2.2ren)
+$input-height: calc(2.2rem + 2px);
+
+// Carousel
+$carousel-control-color: $primary;
+$carousel-indicator-active-bg: $carousel-control-color;
+
+// Modal
+$modal-border-radius: 0;
+$modal-header-bg-color: $primary;
+$modal-backdrop-bg: rgba($black, 0.5);
+
+// This is to make our dropdown less important in favour of
+// default bs value coming from os-header set as 1000
+$zindex-dropdown: 999 !default;
