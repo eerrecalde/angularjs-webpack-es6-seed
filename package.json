@@ -90,7 +90,7 @@
     "jest-cli": "^23.6.0",
     "local-web-server": "^2.6.0",
     "mini-css-extract-plugin": "^0.4.4",
-    "node-sass": "^4.9.4",
+    "node-sass": "^7.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.15.2",
     "sass-loader": "^7.1.0",
